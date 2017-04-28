@@ -1,0 +1,12 @@
+hub:
+    # output of first execution of 'openssl rand -hex 32'
+    cookieSecret: "REDACTED"
+token:
+    # output of second execution of 'openssl rand -hex 32'
+    proxy: "REDACTED"
+singleuser:
+    storage:
+       type: none
+    image:
+       name: aaronwatters1/simons-hub
+       tag: 89421b46da40
