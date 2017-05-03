@@ -1,0 +1,15 @@
+
+Notes for building and deploying the Jupyterhub collection
+
+$ docker build .
+Successfully built b507a62bc9a4
+
+$  git rev-parse HEAD
+89421b46da400da0938f626de80ea71ba9028c9e
+
+$ docker tag b507a62bc9a4 aaronwatters1/simons-hub:89421b46da40
+
+$ docker login
+$ docker push aaronwatters1/simons-hub:89421b46da40
+
+Then update config.yaml with the new tag 89421b46da40 above

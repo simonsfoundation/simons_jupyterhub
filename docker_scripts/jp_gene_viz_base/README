@@ -1,1 +1,14 @@
 Logic for creating a base docker image containing common dependancies.
+
+$ docker build .
+-- last line shows image hash id.
+
+$ git rev-parse HEAD
+a3b722e44012332320fd8a102ff5560f08702d60
+
+$ docker tag 86c509bca5bb aaronwatters1/jp-gene-viz:60f08702d60
+$ docker tag 86c509bca5bb aaronwatters1/jp-gene-viz:latest
+$ docker login
+$ docker push aaronwatters1/jp-gene-viz:60f08702d60
+$ docker push aaronwatters1/jp-gene-viz:latest
+
