@@ -12,7 +12,11 @@ $ docker tag b507a62bc9a4 aaronwatters1/simons-hub:89421b46da40
 $ docker login
 $ docker push aaronwatters1/simons-hub:89421b46da40
 
+$ cd ~/misc/Jupyterhub
+
 Then update config.yaml with the new tag 89421b46da40 above
+
+$ helm upgrade test https://github.com/jupyterhub/helm-chart/releases/download/v0.1/jupyterhub-0.1.tgz -f config.yaml
 
 Change date time stamp to generate a new tag if needed:
 Wed May 31 11:02:18 EDT 2017
