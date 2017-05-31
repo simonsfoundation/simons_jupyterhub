@@ -13,3 +13,6 @@ $ docker login
 $ docker push aaronwatters1/simons-hub:89421b46da40
 
 Then update config.yaml with the new tag 89421b46da40 above
+
+Change date time stamp to generate a new tag if needed:
+Wed May 31 11:02:18 EDT 2017
