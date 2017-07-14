@@ -2,21 +2,26 @@
 Notes for building and deploying the Jupyterhub collection
 
 $ docker build .
-Successfully built b507a62bc9a4
+$ docker build --no-cache=true .
+
+Successfully built 75016fdc22f6
 
 $  git rev-parse HEAD
-89421b46da400da0938f626de80ea71ba9028c9e
+e306eb8ee88bbd323838248daca42efa03634bed
 
-$ docker tag b507a62bc9a4 aaronwatters1/simons-hub:89421b46da40
+$ docker tag 75016fdc22f6 aaronwatters1/simons-hub:e306eb8ee88
 
 $ docker login
-$ docker push aaronwatters1/simons-hub:89421b46da40
+$ docker push aaronwatters1/simons-hub:e306eb8ee88
 
 $ cd ~/misc/Jupyterhub
 
-Then update config.yaml with the new tag 89421b46da40 above
+Then update config.yaml with the new tag e306eb8ee88 above
 
 $ helm upgrade test https://github.com/jupyterhub/helm-chart/releases/download/v0.1/jupyterhub-0.1.tgz -f config.yaml
+
+$ kubectl --namespace=test get pod
+$ kubectl --namespace=test get svc
 
 Change date time stamp to generate a new tag if needed:
 Wed May 31 11:02:18 EDT 2017
